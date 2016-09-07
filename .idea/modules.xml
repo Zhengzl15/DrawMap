@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PositionCollector.iml" filepath="$PROJECT_DIR$/PositionCollector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DrawMap.iml" filepath="$PROJECT_DIR$/DrawMap.iml" />
     </modules>
   </component>
 </project>
