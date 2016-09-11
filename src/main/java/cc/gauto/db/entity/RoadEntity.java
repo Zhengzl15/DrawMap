@@ -6,9 +6,9 @@ package cc.gauto.db.entity;
  * @Date 2016-09-06 20:40
  */
 public class RoadEntity {
-    public int polygonId;
+    public long polygonId;
 
-    public RoadEntity(int id) {
+    public RoadEntity(long id) {
         this.polygonId = id;
     }
 }

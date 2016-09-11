@@ -90,7 +90,7 @@ public class DBHelper {
             while (rs.next()) {
                 int polygonId = rs.getInt("polygon_Id");
                 int type = rs.getInt("type");
-                subjects.add(new SubjectEntity(polygonId, type));
+                subjects.add(new SubjectEntity(type, polygonId));
             }
         }catch (SQLException e) {
             e.printStackTrace();
@@ -105,7 +105,7 @@ public class DBHelper {
             String sql = "select polygon_Id from ROAD where parent_Id=" + subjectId;
             ResultSet rs = executeSql(sql);
             while (rs.next()) {
-                int polygonId = rs.getInt("polygon_Id");
+                long polygonId = rs.getLong("polygon_Id");
                 roads.add(new RoadEntity(polygonId));
             }
         } catch (SQLException e) {
@@ -115,7 +115,7 @@ public class DBHelper {
     }
 
     //根据polygon id获取Polygon
-    public PolygonEntity getPolygonById(int id) {
+    public PolygonEntity getPolygonById(long id) {
         PolygonEntity polygonEntity = null;
         try {
             String sql = "select * from POLYGON where _id=" + id;
@@ -141,7 +141,7 @@ public class DBHelper {
                             double x = Double.parseDouble(tmpStrSplit[0]);
                             double y = Double.parseDouble(tmpStrSplit[1]);
                             vertices[index] = x;
-                            vertices[index] = y;
+                            vertices[index + 1] = y;
                             index = index + 2;
                         }
                     }

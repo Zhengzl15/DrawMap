@@ -47,7 +47,7 @@ public class Main {
                 frame.setVisible(true);
 
                 try {
-                    ImageIO.write(bufferedImage, "jpeg", new File("test.jpg"));
+                    ImageIO.write(bufferedImage, "png", new File("test.jpg"));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

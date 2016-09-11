@@ -6,12 +6,12 @@ package cc.gauto.db.entity;
  * @Date 2016-09-06 20:57
  */
 public class PolygonEntity {
-    public int polygonId;
+    public long polygonId;
     public int layer;
     public int vertexNum;
     public double[] verteces;
 
-    public PolygonEntity(int id, int layer, int vertexNum, double[] verteces) {
+    public PolygonEntity(long id, int layer, int vertexNum, double[] verteces) {
         this.polygonId = id;
         this.layer = layer;
         this.vertexNum = vertexNum;
